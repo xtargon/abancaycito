@@ -1,0 +1,144 @@
+script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+
+script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+script(src='/static/carousel.js')
+link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
+script(src='https://code.jquery.com/jquery-3.4.1.js', integrity='sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=', crossorigin='anonymous')
+script(src='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js')
+
+link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.3.1/css/all.css', integrity='sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU', crossorigin='anonymous')
+link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+script(src="/socket.io/socket.io.js")
+script(src='https://code.jquery.com/jquery-1.9.1.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/FeedEk/3.0.0/js/FeedEk.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js')
+link(rel='StyleSheet' href="/static/style.css" type="text/css")
+div(class="one_index")
+
+	img(src="/static/img_main_file/logo_abancaycito_v1.png" class="ppp")
+	div(class="menu")
+
+
+		a(href="/home")
+			i.material-icons home
+
+		a(class="menu-show" href="/trabajo")
+			i.material-icons business_center
+	a.unreal.btn.float-right.login_btn(onclick="sold_show()")
+		i.rac.material-icons monetization_on
+		p(class="rac_black") vender
+
+	a.unreal2.btn.float-right.login_btn(onclick="buy_show()")
+		i.rac.material-icons money_off
+		p(class="rac_black") comprar
+
+	a.unreal3.btn.float-right.login_btn(href="/home")
+		i.rac.material-icons person_pin
+		p(class="rac_black") Mis ventas
+
+div(class="principal_store")
+	img(src="/static/img_main_file/abc_logo.png" class="store_1")
+	h4(class="store_2") -> comprar
+	hr
+	h5(class="store_3")
+		i.material-icons style 
+		p Productos en venta!
+
+	div(class="see_solds")
+		each val in documents 
+			.card.split
+				.card-image.waves-effect.waves-block.waves-light
+					img.activator.img_all_show(src=val.principal_rute)
+				.card-content
+					span.card-title.activator.grey-text.text-darken-4
+						= val.name
+						i.material-icons.right.closese more_vert
+					p
+					a.cls(onclick="view_corousel('"+val._id+"')")
+						h5 Echar un vistazo
+				.card-reveal
+					span.card-title
+						sdfsdfsdfs 
+
+					span.card-title.blue-text.text-darken-4
+						= val.name
+						i.material-icons.right.closese close
+					p
+						=val.description
+					hr
+
+					p
+						i.material-icons.icon_card phone
+
+						=val.phone
+
+					p
+						i.material-icons.icon_card monetization_on
+
+						=val.price
+
+					p
+						i.material-icons.icon_card hourglass_empty
+
+						=val.date
+
+			
+
+div(class="sold_store")
+	img(src="/static/img_main_file/abc_logo.png" class="store_1")
+	h4(class="store_2") -> Vender
+	hr
+	h5(class="store_3")
+		i.material-icons trending_up 
+		p vender algun producto!
+	div(class="formdiv")
+		form(method="POST" id="form-sold" enctype='multipart/form-data')
+			div(class="name_item_sold")
+				p Nombre del producto
+				input(class="name_text" type="text" id="name")
+			div(class="sold_form")
+				p descripcion del producto
+				input(class="phone_sold" type="text" id="des")
+			div(class="sold_form")
+				p Precio del producto
+				input(class="price_sold" type="number" id="price")
+			div(class="sold_form")
+				.input-field.col.s12
+					select(name="categ" id="categ")
+						option(value='' disabled='' selected='') Escoge una categoria
+						option(value='1') Tegnologia
+						option(value='2') Cocina
+						option(value='3') Automoviles
+						option(value='4') Ropa y Accesorios
+						option(value='5') Casa y Hogar
+					label Categoria del producto
+			div(class="xphoto")
+				label(for="input_photo" class="lab") seleccionar una imagen
+
+				input(type="file" class="input_photo" id="input_photo" name="file")
+				div(class="sold_form")
+					input(type="text" id="file_text")
+
+			a.unreal_sold.btn.float-right.login_btn(onclick="")
+				i.rac.material-icons monetization_on
+				p(class="rac_black") vender
+
+div(class="principal_store_carousel")
+	a.unreal_carousel.btn.float-right.login_btn(onclick="back_carousel()")
+		i.rac.material-icons reply
+		p(class="rac_black") Volver
+	img(src="/static/img_main_file/abc_logo.png" class="store_1")
+	h4(class="top") -> Tienda
+	br
+
+	h4(class="store_4")
+	h4(class="carouse_i")
+		i.material-icons.center view_carousel 
+		br
+
+
+	div(class="carousel" id="carousel")
+	div(class="inf")
+
+div(class="see")
+script(src='/static/config.js')

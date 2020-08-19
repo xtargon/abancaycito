@@ -1,0 +1,90 @@
+script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+script(src="/socket.io/socket.io.js")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+script(src='/static/config.js')
+link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
+script(src='https://code.jquery.com/jquery-3.4.1.js', integrity='sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=', crossorigin='anonymous')
+script(src='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js')
+
+link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.3.1/css/all.css', integrity='sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU', crossorigin='anonymous')
+link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+
+script(src='https://code.jquery.com/jquery-1.9.1.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/FeedEk/3.0.0/js/FeedEk.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js')
+link(rel='StyleSheet' href="/static/style.css" type="text/css")
+div(class="one_index")
+
+	img(src="/static/img_main_file/logo_abancaycito_v1.png" class="ppp")
+	div(class="menu")
+
+
+		a(href="/home")
+			i.material-icons home
+
+		a(class="menu-show" href="/tienda")
+			i.material-icons shopping_cart
+	a.unreal_add.btn.float-right.login_btn(onclick="add_work_form()")
+		i.rac.material-icons note_add
+		p(class="rac_black") Agregar
+
+	a.unreal_back.btn.float-right.login_btn(onclick="show_works()")
+		i.rac.material-icons business_center
+		p(class="rac_black") Trabajos
+
+div(class="principal_store")
+	img(src="/static/img_main_file/abc_logo.png" class="store_1")
+	h4(class="store_2") -> Trabajos
+	hr
+	div(class="all_works")
+		each work in works
+			div(class="works")
+				div(class="title_work")
+					h5 #{work.affair}
+				hr
+				div(class="inf_work")
+					p 
+						i.material-icons monetization_on
+						p(class="earn") #{work.earn}
+				div(class="inf_work")
+					p 
+						i.material-icons call
+						p #{work.phone}
+				div(class="inf_work")
+					p 
+						i.material-icons room
+						p #{work.location}
+				div(class="inf_work")
+					p 			
+						i.material-icons today
+						p #{work.date}
+	div(class="add_work")
+		h5 Publicar un trabajo
+		hr
+		form(id="form_new_work" method="POST")
+			div(class="this_work")
+				label(for="affair_work" class="label_affair_work")
+					i.material-icons description
+					p Asunto del trabajo
+				input(name="affair_work" type="text" id="affair_work")
+			div(class="this_work")
+				label(for="location_work" class="label_location_work")
+					i.material-icons room
+					p Lugar del trabajo
+				input(name="location_work" type="text" id="location_work")
+			br
+			div(class="this_work")
+				label(for="phone_work" class="label_phone_work")
+					i.material-icons call
+					p Telefono de contacto
+				input(name="phone_work" type="number" id="phone_work")
+			div(class="this_work")
+				label(for="earn_work" class="label_earn_work")
+					i.material-icons attach_money
+					p Cuanto piensas pagar?
+				input(name="earn_work" type="number" id="earn_work")
+
+			a.unreal_add_this.btn.float-right.login_btn(onclick="add_new_work()")
+				i.rac.material-icons library_books
+				p(class="rac_black") Añadir
+div(class="see")

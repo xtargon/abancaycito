@@ -1,0 +1,66 @@
+script(src='https://code.jquery.com/jquery-3.4.1.js', integrity='sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=', crossorigin='anonymous')
+link#bootstrap-css(href='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css', rel='stylesheet')
+script(src='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js')
+script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
+script(src="/socket.io/socket.io.js")
+
+link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.3.1/css/all.css', integrity='sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU', crossorigin='anonymous')
+link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+link(rel='StyleSheet' href="/static/style.css" type="text/css")
+script(src='/static/config.js')
+div(class="init_dashboard")
+	img(src="/static/img_main_file/abc_logo.png" class="logo_dashboard_restorant")
+	div(class="menu_dashboard")
+		a(class="menu-show" href="/home")
+			i.material-icons home
+	div(class="menu_dashboard")
+		a(class="red_icon_power" onclick="exit();" href="/exit")
+			i.material-icons.red_icon_power power_settings_new
+
+div(class="main_dashboar")
+	div(class="personal_dates")
+		i.material-icons.icons_personal_dates folder_shared
+		br
+		
+		h5 EDITAR DATOS PERSONALES
+
+	h5 
+	i.material-icons contact_mail | 
+	label Correo Electronico
+	.col
+		input.form-control.input_check(class="edit_my" type='mail', value=dates_user.mail name='e_m_m' id="e_m_m")
+	hr
+	i.material-icons account_circle | 
+	label Nombre
+	.col
+		input.form-control.input_check(class="edit_my" type='text', value=dates_user.name name='e_m_n' id="e_m_n")
+	hr
+	i.material-icons person_pin | 
+	label Usuario
+	.col
+		input.form-control.input_check(class="edit_my" type='text', value=dates_user.user name='e_m_u' id="e_m_u")
+	hr
+	i.material-icons contact_phone | 
+	label Telefono
+	.col
+		input.form-control.input_check(class="edit_my" type='text', value=dates_user.phone name='e_m_p' id="e_m_p")
+	a.edit_my_data.btn.float-right.login_btn.rock(onclick="edit_user_arraw('"+dates_user.user_id+"')")
+		i.material-icons brush	
+
+div(class="build_main_create")
+	h3 Debes ser ejecutivo para añadir un negocio :(
+	hr
+	h5 Si quieres ser ejecutivo debes ponerte en contacto con el administrador
+
+	div(class="view_admin")
+		img(class="admin_img" src="/static/img_main_file/admin.jpg")
+		div(class="inf_admin")
+			h5(class="name_admin") Gabriel Alejo Carruyo Finol
+			h5
+				i.material-icons._admin_mail email
+				p Abancaycito.official@gmail.com
+			h5 FACEBOOK: 
+				a(class="social_redirect" href="https://www.facebook.com/Xtargon/") Gabriel CF
+
+

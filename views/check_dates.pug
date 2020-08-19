@@ -1,0 +1,81 @@
+script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js')
+script(src='http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js')
+script(src='http://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js')
+link(rel='stylesheet' type='text/css' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css')
+script(type='text/javascript' src='/static/morris.min.js')
+link(rel='stylesheet' type='text/css' href='/static/morris.css')
+script(src='https://cdn.oesmith.co.uk/morris-0.4.1.min.js')
+link#bootstrap-css(href='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css', rel='stylesheet')
+script(src='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js')
+link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
+script(src="http://localhost:3000/socket.io/socket.io.js")
+
+
+link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.3.1/css/all.css', integrity='sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU', crossorigin='anonymous')
+link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+link(rel='StyleSheet' href="/static/style.css" type="text/css")
+
+div(class="one_index")
+	h1 ABANCAYCITO
+	div(class="menu")
+		a.Comunidad_menu
+			Comunidad Verifica tus datos
+
+		a(class="home_menu" href="/")
+			i.material-icons home
+
+div(class="good_hour")
+	
+	h2 Verifica que todos los datos sean correctos
+	hr
+	div(class="choose_type_user")
+		h4 Elige un tipo de usuario 
+		div(class="choose_standard")
+			a(class="shoose_1")
+				img(src="/static/img_main_file/abc_logo.png" class="log")
+				br 
+				h3(class="inf_shoose") usuario standard
+		div(class="choose_admin_business")
+			a(class="shoose_2")
+				img(src="/static/img_main_file/abc_logo.png" class="log_1")
+				br
+				h3(class="inf_shoose") usuario ejecutivo
+		hr
+
+		.form(id="edit_user_form")
+			i.material-icons vpn_key | 
+			label Contraseña
+			.col
+				input#password.form-control.input_check(type='password', value=Pass name='password')
+			.col
+				button.btn.btn-primary(type='button', onclick='mostrarContrasena()')
+					i.material-icons visibility
+			hr
+			i.material-icons person | 
+			label Nombre
+			input(value=Name class="form-control input_check" name='name' id="name_check")
+
+			hr
+			i.material-icons person_pin | 
+			label Nombre de usuario
+			input(value=Username class="form-control input_check" name='username' id="user_check")
+
+			hr
+			i.material-icons mail | 
+			label Correo electronico
+			input(value=Mail class="form-control input_check" name='mail' id="mail_check")
+
+			hr
+			i.material-icons phone | 
+			label Numero de telefono
+			input(value=Phone class="form-control input_check" name='phone' id="phone_check")
+
+			button(class="btn save_user")
+				i.material-icons done_all
+			a(class="btn cancel_user_check" href="/")
+				i.material-icons close
+	div(class="alert")
+		h3 Felicitaciones! ya formas parte de la comunidad de abancaycito, genial!
+	div(class="bad_alert")
+		h3 a ocurrido un error lo mas probable que el nombre de usuario ya esta ocupado!
+script(src='/static/config.js')

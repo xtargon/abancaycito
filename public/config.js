@@ -1,4 +1,4 @@
-  var socket = io('https://abancaycito.herokuapp.com/');
+  var socket = io();
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('select');
     var instances = M.FormSelect.init(elems);

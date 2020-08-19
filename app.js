@@ -2,8 +2,7 @@ const dashboard = require('./dashboard');
 var express = require('express')
 var app = express();
 var server = require('http').Server(app);
-var io = require('socket.io');
-var socketio = io.listen(server)
+var io = require('socket.io')(server);
 var moment = require('moment');
 const fileUpload = require('express-fileupload')
 const md5 = require('md5');
@@ -25,6 +24,11 @@ const Cookie_Acces = require('./middliwares/session-cookies')
 const cookieSession = require('cookie-session');
 const Router = express.Router();
 
+io.configure(function() { 
+    io.set("transports", ["xhr-polling"]); 
+    io.set("polling duration", 10); 
+}); 
+
 app.set('port', process.env.PORT || 3000);
 
 app.set('trust proxy', 1)
@@ -42,7 +46,7 @@ mongoose.connect('mongodb+srv://xtargon_abancaycito:232325252626a@abancaycito.h2
   useUnifiedTopology: true
 });
 
-socketio.on('connection', function (socket) {
+io.on('connection', function (socket) {
 
 	socket.on('login_arrow',  function (request) {
 

@@ -1,4 +1,4 @@
-  var socket = io('http://localhost:3000/');
+  var socket = io('https://abancaycito.herokuapp.com/');
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('select');
     var instances = M.FormSelect.init(elems);

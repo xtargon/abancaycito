@@ -2,6 +2,9 @@
 	color: red !important;
 
 }
+.mySlides{
+	width: 50% !important;
+}
 .red_icon_power:hover{
 	background: #f3f4f3 !important;
 	border-bottom: 0px solid red  ;
@@ -71,7 +74,7 @@ a{
   box-shadow: 3px 3px 5px #3f405233;
   padding: 5px;
   background: #324654;
-	height:  150px;
+	height:  22%;
   color: white;
 }
 .menu
@@ -193,7 +196,7 @@ font-size: 20px;
 height: 60%;
 position: absolute;
 display: none;
-margin-top: -90px;
+margin-top: -70px;
 width: 42%;
 text-align: center;
 margin-left: 60%;
@@ -203,7 +206,7 @@ border-radius: 10px;
 .container2{
 height: 60%;
 position: absolute;
-margin-top: -90px;
+margin-top: -70px;
 width: 42%;
 text-align: center;
 margin-left: 60%;
@@ -454,11 +457,11 @@ width: 80%;
 
 .logo
 {
-	width: 145px;
-	height: 150px;
-	border-right: 1px solid white;
-	margin-top:-50px;
-	background: #324654;
+    width: 105px;
+    height: 85px;
+    border-right: 1px solid white;
+    margin-top: -20px;
+    background: #324654;
 }
 
 .logo_dashboard_restorant{
@@ -2173,7 +2176,7 @@ margin-top: 5px;
 }
 
 .fade {
-
+ width: 50% !important;
 }
 
 @-webkit-keyframes shown {
@@ -3113,20 +3116,27 @@ input[type=number] { -moz-appearance:textfield !important; }
 }
 
 ._b_{
-	margin-top: -530px;
+	margin-top: -5%;
 	height: 95%;
 	background-color: #171717;
-	width: 200%;
+	z-index: 1000;
+	width: 100%;
+}
+
+.abancaycito_logo{
+	margin-top: -33%;
 }
 
 .pricipal_options{
-	margin-left: 30px;
+	margin-left: 5%;
 	margin-top: 30px;
 }
 
 .centerme{
 	margin-top: 20%;
-	margin-left: 90px;
+	float: left;
+	width: 50%;
+	margin-left: 13%;
 }
 
 .view_admin{
@@ -3191,8 +3201,8 @@ input[type=number] { -moz-appearance:textfield !important; }
 }
 
 .view_admin_2{
-	width: auto;
-	height: auto;
+	width: 100%;
+	height: 460px;
 	padding: 15px;
 	color: transparent;
 	background: transparent;
@@ -3207,6 +3217,7 @@ input[type=number] { -moz-appearance:textfield !important; }
     transition: .5s all;   
     transition-delay: 0.5s;
     border-radius: 5px;
+    overflow-y: scroll;
 }
 
 .name_admin_2{

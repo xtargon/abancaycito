@@ -83,10 +83,10 @@ router.post('/add_business', function(req, res) {
 	}
 	if (req.files.file != null) {
 		let EDFile = req.files.file
-			EDFile.mv(`./public/img_main_file/img_uploaded/portadas/${EDFile.name}`,err => {
+			EDFile.mv(`./public/img_main_file/${EDFile.name}`,err => {
 			if(err) return res.status(500).send({ message : err })
 		})
-		var Ruta = `/static/img_main_file/img_uploaded/portadas/${EDFile.name}`;
+		var Ruta = `/static/img_main_file/${EDFile.name}`;
 
 		var new_business = new Business_model({
 	 		name: req.body.name,
@@ -107,7 +107,7 @@ router.post('/add_business', function(req, res) {
 
 router.post('/upload',(req,res,next) => {
     let EDFile = req.files.file
-    EDFile.mv(`./public/img_main_file/img_uploaded/${EDFile.name}`,err => {
+    EDFile.mv(`./public/img_main_file/${EDFile.name}`,err => {
         if(err) return res.status(500).send({ message : err })
  		res.redirect("/dashboard")
     })
@@ -115,7 +115,7 @@ router.post('/upload',(req,res,next) => {
 
 router.post('/upload_logo',(req,res,next) => {
     let EDFile = req.files.file
-    EDFile.mv(`./public/img_main_file/img_uploaded/Logos/${EDFile.name}`,err => {
+    EDFile.mv(`./public/img_main_file/${EDFile.name}`,err => {
         if(err) return res.status(500).send({ message : err })
  		res.redirect("/dashboard")
     })

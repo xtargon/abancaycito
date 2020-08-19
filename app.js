@@ -23,11 +23,11 @@ const imagenes_beef = require('./Schemas/img_pluaded').imgbef
 const Cookie_Acces = require('./middliwares/session-cookies')
 const cookieSession = require('cookie-session');
 const Router = express.Router();
-
+app.use('/static', express.static('public'));
 app.set('port', process.env.PORT || 3000);
 
 app.set('trust proxy', 1)
-app.use('/static', express.static('public'));
+
 app.use(fileUpload())
 app.use(bodyParser.urlencoded({ extended: false }))
 
@@ -492,10 +492,10 @@ render(main)
 app.post('/upload_Catalogue', function (req, res, next) {
 	console.log(req.body.user_image_Catalogue);
 	let EDFile = req.files.file
-		EDFile.mv(`./public/img_main_file/img_uploaded/Catalogue/${EDFile.name}`,err => {
+		EDFile.mv(`./public/img_main_file/${EDFile.name}`,err => {
 		if(err) return res.status(500).send({ message : err })
 	})
-		var Ruta = `/static/img_main_file/img_uploaded/Catalogue/${EDFile.name}`
+		var Ruta = `/static/img_main_file/${EDFile.name}`
 		const beef = new imagenes_beef({
 		 	Ruta:Ruta,
 		 	property: req.body.user_image_Catalogue
@@ -509,10 +509,10 @@ app.post('/upload_Catalogue', function (req, res, next) {
 
 app.post('/upload_logo', function (req, res, next) {
 	let EDFile = req.files.file
-		EDFile.mv(`./public/img_main_file/img_uploaded/Logos/${EDFile.name}`,err => {
+		EDFile.mv(`./public/img_main_file/${EDFile.name}`,err => {
 		if(err) return res.status(500).send({ message : err })
 	})
-		var Ruta = `/static/img_main_file/img_uploaded/Logos/${EDFile.name}`
+		var Ruta = `/static/img_main_file/${EDFile.name}`
 		Business_model.findOne({ author:req.body.user_image_bussines},(err, docs)=>{
 			docs.logo = Ruta;
 
@@ -684,10 +684,10 @@ app.post('/upload_item', (req,res)=>{
 	var sa = moment().format('Do, h:mm:ss a');
 
 	let EDFile = req.files.file
-		EDFile.mv(`./public/img_main_file/img_uploaded/store/${EDFile.name}`,err => {
+		EDFile.mv(`./public/img_main_file/${EDFile.name}`,err => {
 		if(err) return res.status(500).send({ message : err })
 	})
-	var Ruta = `/static/img_main_file/img_uploaded/store/${EDFile.name}`;
+	var Ruta = `/static/img_main_file/${EDFile.name}`;
 		const tree = new sold_model({
 		 	name:req.body.name,
 		 	description: req.body.des,
@@ -719,10 +719,10 @@ app.post('/upload_new_item', (req,res)=>{
 	var sa = moment().format('Do, h:mm:ss a');
 
 	let EDFile = req.files.file
-		EDFile.mv(`./public/img_main_file/img_uploaded/store/${EDFile.name}`,err => {
+		EDFile.mv(`./public/img_main_file/${EDFile.name}`,err => {
 		if(err) return res.status(500).send({ message : err })
 	})
-	var Ruta = `/static/img_main_file/img_uploaded/store/${EDFile.name}`;
+	var Ruta = `/static/img_main_file/${EDFile.name}`;
 
 	const sold_tree = new sold_img({
 		ruta:Ruta,

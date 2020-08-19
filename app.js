@@ -24,11 +24,6 @@ const Cookie_Acces = require('./middliwares/session-cookies')
 const cookieSession = require('cookie-session');
 const Router = express.Router();
 
-io.configure(function() { 
-    io.set("transports", ["xhr-polling"]); 
-    io.set("polling duration", 10); 
-}); 
-
 app.set('port', process.env.PORT || 3000);
 
 app.set('trust proxy', 1)

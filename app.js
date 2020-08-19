@@ -2,7 +2,8 @@ const dashboard = require('./dashboard');
 var express = require('express')
 var app = express();
 var server = require('http').Server(app);
-var io = require('socket.io')(server);
+var io = require('socket.io');
+var socketio = io.listen(server)
 var moment = require('moment');
 const fileUpload = require('express-fileupload')
 const md5 = require('md5');
@@ -41,7 +42,7 @@ mongoose.connect('mongodb+srv://xtargon_abancaycito:232325252626a@abancaycito.h2
   useUnifiedTopology: true
 });
 
-io.on('connection', function (socket) {
+socketio.on('connection', function (socket) {
 
 	socket.on('login_arrow',  function (request) {
 

@@ -52,7 +52,7 @@ div(class="build_main_create")
 	h5 Añade un negocio
 
 	hr
-	form(action="/dashboard/add_business" method="POST")
+	form(enctype='multipart/form-data' method="POST")
 		.input-group.form-group
 		.input-group-prepend
 		span.input-group-text
@@ -101,10 +101,7 @@ div(class="build_main_create")
 		input.form-control(type='text', placeholder="Telefono de contacto del negocio" name="phone_business" id="phone")
 		input(type="hidden" value=dates_user.user_id name="user_business")
 
-	button.next_cap.btn.float-right.login_btn(onclick="show_next_cap()")
-		i.material-icons save
 
-div(class="next_steps")
 	div("add_pictures_bussiness")
 		h4 Genial, ya solo falta elegir algunas imagenes para tu negocio!
 		hr

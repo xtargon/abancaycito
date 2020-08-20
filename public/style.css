@@ -72,16 +72,18 @@ a{
 
 .one_index{
   box-shadow: 3px 3px 5px #3f405233;
-  padding: 5px;
+  padding: 25px;
   background: #324654;
 	height:  22%;
   color: white;
+  overflow-y: all;
+  z-index: 1000;
 }
 .menu
 {
 	display: inline-block;
 	float: right;
-	margin-top:20px;
+	margin-top:-100px;
 }
 .menu i
 {
@@ -457,12 +459,15 @@ width: 80%;
 
 .logo
 {
-    width: 105px;
-    height: 85px;
-    border-right: 1px solid white;
-    margin-top: -20px;
-    background: #324654;
+ 
 }
+
+
+.cont_logo{
+
+margin-top: -7%;
+}
+
 
 .logo_dashboard_restorant{
     width: 100px;
@@ -3123,20 +3128,48 @@ input[type=number] { -moz-appearance:textfield !important; }
 	width: 100%;
 }
 
+@media screen and (max-width: 650px) {
+	.abancaycito_logo{
+		display: none;
+	}
+
+	.one_index{
+		background-color: #171717;
+		height:5px;
+	}	
+
+	.pricipal_options{
+		display: inline-flex;
+	}
+
+	.container{
+		width: 80%;
+		overflow-x: auto;s
+	}
+
+	.centerme{
+	}
+
+}
+
 .abancaycito_logo{
-	margin-top: -33%;
+float: left;
+margin-top: auto;
+z-index: -40;
 }
 
 .pricipal_options{
-	margin-left: 5%;
-	margin-top: 30px;
+margin-top: 10px;
+display: inline-block;
 }
 
 .centerme{
-	margin-top: 20%;
-	float: left;
-	width: 50%;
-	margin-left: 13%;
+height: auto;
+width: 30px;
+display: inline-block;
+float: left;
+margin-top: -45px;
+margin-left: 25px;
 }
 
 .view_admin{

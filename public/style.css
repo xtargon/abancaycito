@@ -830,14 +830,16 @@ width: 80%;
 
 
 .all_view_restaurant{
-    margin-left: 2%;
-    width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
     height: 450px;
     box-shadow: 3px 3px 5px #3f405233;
     border: 1px solid #03030330;
     background: white;
     margin-top: 90px;
     display: inline-block;
+    width: 90%;
+
 }
 
 .cover_page{

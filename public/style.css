@@ -3038,7 +3038,7 @@ input{
 	border: 1px solid #f3f3f3;
 	border-radius: 5px;
 	padding: 1%;
-	height: 280px;
+	height: 300px;
 	overflow-y: scroll;
 	margin-left: 15%;
 	margin-top: 20px;
@@ -3146,7 +3146,7 @@ input[type=number] { -moz-appearance:textfield !important; }
 		position: absolute;
 		float: right;
 		background: #5d849e85;
-		margin-left: 46%;
+		margin-left: 35%;
 		width: 160px;
 		height: 50px;
 		visibility:visible;
@@ -3158,7 +3158,7 @@ input[type=number] { -moz-appearance:textfield !important; }
 		position: absolute;
 		float: right;
 		background: #5d849e85;
-		margin-left: 46%;
+		margin-left: 35%;
 		width: 160px;
 		height: 50px;
 		visibility:visible;
@@ -3170,7 +3170,7 @@ input[type=number] { -moz-appearance:textfield !important; }
 		position: absolute;
 		float: right;
 		background: #5d849e85;
-		margin-left: 46%;
+		margin-left: 35%;
 		width: 160px;
 		height: 50px;
 		display: none;
@@ -3193,7 +3193,7 @@ input[type=number] { -moz-appearance:textfield !important; }
 		position: absolute;
 		float: right;
 		background: #5d849e85;
-		margin-left: 46%;
+		margin-left: 35%;
 		width: 160px;
 		height: 50px;
 		visibility:hidden;
@@ -3204,7 +3204,7 @@ input[type=number] { -moz-appearance:textfield !important; }
 		position: absolute;
 		float: right;
 		background: #5d849e85;
-		margin-left: 46%;
+		margin-left: 35%;
 		width: 160px;
 		height: 50px;
 		visibility:hidden;

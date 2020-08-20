@@ -662,7 +662,7 @@ width: 80%;
 	box-shadow: 3px 3px 3px #3f405233;
 	padding: 8px;
 	overflow-y: scroll;
-	height: 80%;
+	height: 550px;
 	border-radius: 3%;
 	overflow-x: hidden;
 }
@@ -692,7 +692,7 @@ width: 80%;
 
 .build_main{
 	margin-left: 5%;
-	width: 70%;
+	width: 60%;
 	background: white;
 	margin-top: -5px;
 	height: 550px;
@@ -705,7 +705,7 @@ width: 80%;
 
 .orders_dashboard{
 	margin-left: 5%;
-	width: 70%;
+	width: 60%;
 	background: white;
 	margin-top: -5px;
 	height: 550px;
@@ -719,7 +719,7 @@ width: 80%;
 
 .inner{
 	margin-left: 5%;
-	width: 70%;
+	width: 60%;
 	background: white;
 	margin-top: -5px;
 	height: 550px;
@@ -732,7 +732,7 @@ width: 80%;
 
 .dashboard_garfics{
 	margin-left: 5%;
-	width: 70%;
+	width: 60%;
 	background: white;
 	margin-top: -5px;
 	height: 550px;

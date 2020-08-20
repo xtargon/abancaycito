@@ -192,7 +192,7 @@ font-size: 20px;
 .container{
 height: 60%;
 position: absolute;
-float: right;
+margin-top: -70px;
 width: 42%;
 text-align: center;
 margin-left: 70%;
@@ -205,8 +205,8 @@ height: 60%;
 position: absolute;
 margin-top: -70px;
 width: 42%;
-float: right;
 text-align: center;
+margin-left: 70%;
 padding: 5px;
 border-radius: 10px;
 }
@@ -3148,7 +3148,12 @@ input[type=number] { -moz-appearance:textfield !important; }
 	}
 
 	.container2{
-		margin-left: 30%;
+		margin-left: 70%;
+		margin-top:-60px;
+	}
+
+	.container{
+		margin-left: 70%;
 		margin-top:-60px;
 	}
 

@@ -192,10 +192,10 @@ font-size: 20px;
 .container{
 height: 60%;
 position: absolute;
-margin-top: -70px;
+float: right;
 width: 42%;
 text-align: center;
-margin-left: 80%;
+margin-left: 70%;
 padding: 5px;
 border-radius: 10px;
 display: none;
@@ -205,8 +205,8 @@ height: 60%;
 position: absolute;
 margin-top: -70px;
 width: 42%;
+float: right;
 text-align: center;
-margin-left: 80%;
 padding: 5px;
 border-radius: 10px;
 }

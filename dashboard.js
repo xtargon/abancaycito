@@ -79,7 +79,7 @@ router.post('/add_business', function(req, res) {
 
 	
 	if (req.files.file == null) {
-		res.redirect("/dashboard")
+		res.redirect("/dashboard/asd")
 	}
 		let EDFile = req.files.file
 			EDFile.mv(`./public/img_main_file/${EDFile.name}`,err => {

@@ -1,16 +1,15 @@
 .slideshow-container {
-  max-width: 570px;
-  max-height: 400px;
-  position: relative;
-  float: right;
-  margin-right: 40px;
-  margin-right: 50px;
-  margin-top: 150px;
-  background: white;
-  padding: 10px;
-  box-shadow: 3px 3px 5px #3f405233;
-  opacity: 1;
-  color: #f3f3f3;
+    max-width: 670px;
+    max-height: 400px;
+    position: relative;
+    margin-left: 15%;
+    margin-right: 50px;
+    margin-top: 40px;
+    background: white;
+    padding: 10px;
+    box-shadow: 3px 3px 5px #3f405233;
+    opacity: 1;
+    color: #f3f3f3;
 }
 
 /* Hide the images by default */

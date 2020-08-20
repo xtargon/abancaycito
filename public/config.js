@@ -43,7 +43,6 @@ function start_bussines() {
         }).done(function(res){
           alert("bien")
         });
-        location.href = "/dashboard";
   }
 }
 

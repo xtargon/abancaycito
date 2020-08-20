@@ -80,6 +80,24 @@ a{
 	float: right;
 	margin-top:-100px;
 }
+.menu2{
+	display: inline-block;
+	float: right;
+	margin-top:50px;
+}
+
+.menu2 i{
+	margin-right: 5px;
+	font-size: 28px;
+	margin-right: 35px;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	padding-bottom: 5px;
+	cursor: pointer;
+	color:#f9feffdb;
+}
+
 .menu i
 {
 	margin-right: 5px;

@@ -81,7 +81,6 @@ router.post('/add_business', function(req, res) {
 	if (req.files.file == null) {
 		res.redirect("/dashboard")
 	}
-	if (req.files.file != null) {
 		let EDFile = req.files.file
 			EDFile.mv(`./public/img_main_file/${EDFile.name}`,err => {
 			if(err) return res.status(500).send({ message : err })
@@ -100,9 +99,8 @@ router.post('/add_business', function(req, res) {
 	 		portada:Ruta
 	 	});
 	 	new_business.save().then(
-	 		res.redirect("/dashboard")
+	 		res.redirect("/vistazo/"+req.body.name+"")
 	 	);
-	}
 });
 
 router.post('/upload',(req,res,next) => {

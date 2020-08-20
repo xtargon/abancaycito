@@ -101,11 +101,11 @@ function show_master() {
                                 <h5>
                                   INSTAGRAM: <a class="social_redirect" href="https://www.instagram.com/gabo_finol/">@gabo_finol</a>
                                 </h5>
+                                <hr>
                                 <h5>
                                     <i class="material-icons _admin_mail_2"> email </i>
                                     <p class="this_inf_admin"> Abancaycito.official@gmail.com </p>
                                 </h5>
-                                <hr>
                                 <h5>
                                     <i class="material-icons _admin_mail_2"> call </i>
                                     <p class="this_inf_admin"> +51 976 431 101 </p>

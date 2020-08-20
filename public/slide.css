@@ -1,15 +1,16 @@
 .slideshow-container {
-    max-width: 570px;
-    max-height: 400px;
-    top: 25px;
-    margin-right: 40px;
-    margin-left: 100px;
-    background: white;
-    padding: 10px;
-    display: inline-block;
-    box-shadow: 3px 3px 5px #3f405233;
-    opacity: 1;
-    color: #f3f3f3;
+  max-width: 570px;
+  max-height: 400px;
+  position: relative;
+  float: right;
+  margin-right: 40px;
+  margin-right: 50px;
+  margin-top: 150px;
+  background: white;
+  padding: 10px;
+  box-shadow: 3px 3px 5px #3f405233;
+  opacity: 1;
+  color: #f3f3f3;
 }
 
 /* Hide the images by default */
@@ -21,27 +22,26 @@
 
 /* Next & previous buttons */
 .prev, .next {
-    position: absolute;
-    /* top: -5px; */
-    width: auto;
-    margin-top: -100px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    opacity: 1;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  opacity: 1;
 }
 
 /* Position the "next button" to the right */
 .next {
-    border-radius: 3px 0 0 3px;
-    opacity: 1;
-    /* position: absolute; */
-    right: 51%;
-    /* display: block;
+  right: 10;
+  border-radius: 3px 0 0 3px;
+  opacity: 1;
 }
 
 /* On hover, add a black background color with a little bit see-through */

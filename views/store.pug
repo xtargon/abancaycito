@@ -46,7 +46,7 @@ div(class="principal_store")
 
 	div(class="see_solds")
 		each val in documents 
-			.card
+			.card.split
 				.card-image.waves-effect.waves-block.waves-light
 					img.activator.img_all_show(src=val.principal_rute)
 				.card-content
@@ -81,7 +81,6 @@ div(class="principal_store")
 						i.material-icons.icon_card hourglass_empty
 
 						=val.date
-
 			
 
 div(class="sold_store")

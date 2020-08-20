@@ -22,10 +22,9 @@
 /* Next & previous buttons */
 .prev, .next {
     position: absolute;
-    display: inline-block;
-    top: 120%;
+    /* top: -5px; */
     width: auto;
-    margin-top: -22px;
+    margin-top: -100px;
     padding: 16px;
     color: white;
     font-weight: bold;
@@ -38,9 +37,11 @@
 
 /* Position the "next button" to the right */
 .next {
-  right: 10;
-  border-radius: 3px 0 0 3px;
-  opacity: 1;
+    border-radius: 3px 0 0 3px;
+    opacity: 1;
+    /* position: absolute; */
+    right: 51%;
+    /* display: block;
 }
 
 /* On hover, add a black background color with a little bit see-through */

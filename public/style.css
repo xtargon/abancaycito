@@ -1823,7 +1823,7 @@ table, th, td {
 }
 
 .img_all_show{
-
+height: 250px !important;
 }
 
 .card{

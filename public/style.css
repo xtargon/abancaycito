@@ -830,14 +830,14 @@ width: 80%;
 
 
 .all_view_restaurant{
-	margin-left: 2%;
-	width: 50%;
-	height: 83%;
-	box-shadow: 3px 3px 5px #3f405233;
-	border:1px solid #03030330;
-	background: white;
-	margin-top: 90px;
-	position: fixed;
+    margin-left: 2%;
+    width: 100%;
+    height: 450px;
+    box-shadow: 3px 3px 5px #3f405233;
+    border: 1px solid #03030330;
+    background: white;
+    margin-top: 90px;
+    display: inline-block;
 }
 
 .cover_page{
@@ -3159,6 +3159,10 @@ input[type=number] { -moz-appearance:textfield !important; }
 		height: 50px;
 		visibility:visible;
 
+	}
+
+	.slideshow-container{
+		width: 100% !important;
 	}
 
 	.unreal_add{

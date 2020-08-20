@@ -192,7 +192,6 @@ font-size: 20px;
 .container{
 height: 60%;
 position: absolute;
-display: none;
 margin-top: -70px;
 width: 42%;
 text-align: center;
